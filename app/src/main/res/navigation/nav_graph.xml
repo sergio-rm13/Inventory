@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.sergio.inventory.iu.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_dashboardFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_listDependencyFragment"
+            app:destination="@id/listDependencyFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.sergio.inventory.iu.SettingsFragment"
+        android:label="SettingsFragment" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.sergio.inventory.iu.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/listDependencyFragment"
+        android:name="com.sergio.inventory.iu.dependency.ListDependencyFragment"
+        android:label="fragment_list_dependency"
+        tools:layout="@layout/fragment_list_dependency" >
+
+        <action
+            android:id="@+id/action_listDependencyFragment_to_editDependencyFragment"
+            app:destination="@id/editDependencyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editDependencyFragment"
+        android:name="com.sergio.inventory.iu.dependency.EditDependencyFragment"
+        android:label="fragment_edit_dependency"
+        tools:layout="@layout/fragment_edit_dependency" >
+        <argument android:name="dependency"
+            app:argType="com.sergio.inventory.data.model.Dependency" />
+    </fragment>
+</navigation>

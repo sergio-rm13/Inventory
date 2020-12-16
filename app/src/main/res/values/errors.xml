@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="err_user_empty">El usuario no puede ser vacío</string>
+    <string name="err_password_empty">La contraseña no puede ser vacía</string>
+    <string name="err_password_format">El formato de la contraseña no es correcto</string>
+    <string name="err_authentication">Error de autenticacion</string>
+    <string name="err_confirm_password">La contraseñas no son iguales</string>
+    <string name="err_email_empty">El email no puede estar vacío</string>
+    <string name="err_user_exists">Ya existe el usuario</string>
+    <string name="err_email_format">El formato del email no es correcto</string>
+</resources>
